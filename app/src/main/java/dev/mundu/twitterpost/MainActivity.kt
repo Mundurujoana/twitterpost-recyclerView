@@ -16,19 +16,19 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun displayTweets() {
-        var tweet = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ever ??",
+        var tweet = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ??",
             "#loveAndLight", "", "", "","","123","","456","","987","")
-        var tweet2 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ever ??",
+        var tweet2 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ??",
             "#loveAndLight", "", "", "","","123","","456","","987","")
-        var tweet3 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ever ??",
+        var tweet3 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ??",
             "#loveAndLight", "", "", "","","123","","456","","987","")
-        var tweet4 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ever ??",
+        var tweet4 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ??",
             "#loveAndLight", "", "", "","","123","","456","","987","")
-        var tweet5 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ever ??",
+        var tweet5 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ??",
             "#loveAndLight", "", "", "","","123","","456","","987","")
-        var tweet6 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ever ??",
+        var tweet6 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ??",
             "#loveAndLight", "", "", "","","123","","456","","987","")
-        var tweet7 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ever ??",
+        var tweet7 = Tweeter("", "joana@Mundurujoana . 6h", "100k to whoever gets this!  Who started calling me joana first ??",
             "#loveAndLight", "", "", "","","123","","456","","987","")
 
         var twitterList = listOf(tweet,tweet2,tweet3,tweet4,tweet5,tweet6,tweet7)
