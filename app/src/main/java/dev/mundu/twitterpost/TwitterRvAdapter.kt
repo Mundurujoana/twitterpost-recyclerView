@@ -6,23 +6,26 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import dev.mundu.twitterpost.databinding.ActivityMainBinding
+import dev.mundu.twitterpost.databinding.TwitterListItemBinding
 
 class TwitterRvAdapter (var twitterList: List<Tweeter>):
 RecyclerView.Adapter<tweetViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): tweetViewHolder {
-        var itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.twitter_list_item, parent, false)
-        return  tweetViewHolder(itemView)
+            var binding =
+                TwitterListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            var tweetsViewHolder = tweetViewHolder(binding)
+            return  tweetsViewHolder
     }
 
     override fun onBindViewHolder(holder: tweetViewHolder, position: Int) {
         var currenttweet =twitterList.get(position)
-        holder.tvName.text = currenttweet.name
-        holder.tvHashtag.text = currenttweet.hashtag
-        holder.tvTweet.text = currenttweet.tweet
-        holder.tvOne.text = currenttweet.text
-        holder.tvTwo.text = currenttweet.text1
-        holder.tvThree.text = currenttweet.text2
+        holder.binding.tvName.text = currenttweet.name
+        holder.binding.tvHashtag.text = currenttweet.hashtag
+        holder.binding.tvTweet.text = currenttweet.tweet
+        holder.binding.tvOne.text = currenttweet.text
+        holder.binding.tvTwo.text = currenttweet.text1
+        holder.binding.tvThree.text = currenttweet.text2
 
     }
 
@@ -31,22 +34,8 @@ RecyclerView.Adapter<tweetViewHolder>(){
     }
 }
 
-class  tweetViewHolder(itemView: View):
-    RecyclerView.ViewHolder(itemView){
-    var tvName = itemView.findViewById<TextView>(R.id.tvName)
-    var tvTweet = itemView.findViewById<TextView>(R.id.tvTweet)
-    var tvHashtag = itemView.findViewById<TextView>(R.id.tvHashtag)
-    var mvIo = itemView.findViewById<ImageView>(R.id.mvIo)
-    var mvIf = itemView.findViewById<ImageView>(R.id.mvIf)
-    var mvIt = itemView.findViewById<ImageView>(R.id.mvIt)
-    var ivUser = itemView.findViewById<ImageView>(R.id.ivUser)
-    var mvOne = itemView.findViewById<ImageView>(R.id.mvOne)
-    var tvOne = itemView.findViewById<TextView>(R.id.tvOne)
-    var mvTwo = itemView.findViewById<ImageView>(R.id.mvTwo)
-    var tvTwo = itemView.findViewById<TextView>(R.id.tvTwo)
-    var mvThree = itemView.findViewById<ImageView>(R.id.mvThree)
-    var tvThree = itemView.findViewById<TextView>(R.id.tvThree)
-    var mvFour = itemView.findViewById<ImageView>(R.id.mvFour)
+class  tweetViewHolder(var binding: TwitterListItemBinding):
+    RecyclerView.ViewHolder(binding.root){
 
 }
 
